@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block icon_bar %}
+{% endblock %}
+
+{% block body %}
+
+	<!-- Components -->
+	<section class="content-section" id="components">
+		<div class="container">
+			<div class="content-section-heading text-center">
+                <h2>{{ loc_data["content_heading"] }}</h2>
+{#                <a href="#" role="button" class="btn popovers" data-toggle="popover" data-trigger="focus" title="Additional Risks" data-content="#}
+{#                <div class='riskit'>#}
+{#                    <a href='https://google.com'><img src='static/images/risk_kit/pwidShare.svg'></a>#}
+{#                    <a href='https://google.com'><img src='static/images/risk_kit/pwidNoShare.svg'></a>#}
+{#                    <a href='https://google.com'><img src='static/images/risk_kit/msm.svg'></a>#}
+{#                    <a href='https://google.com'><img src='static/images/risk_kit/tb.svg'></a>#}
+{#                    <a href='https://google.com'><img src='static/images/risk_kit/migrant.svg'></a>#}
+{#                </div>#}
+{#                "><i class="fas fa-info-circle"></i></a>#}
+
+                {#                <h3 class="text-secondary mb-3 ">{{ loc_data["content_subheading"] }}</h3>#}
+			</div>
+			<div class="row no-gutters">
+                {% for card in loc_data["cards"] %}
+				<div class="col-lg-6">
+                    {% if loop.first %}
+                        <a class="portfolio-item" href="{{ card["href"] }}" data-toggle="modal" data-target="#RC_modal">
+                    {% elif loop.last %}
+                        <a class="portfolio-item ls-modal" href="#" data-target="{{ card["href"] }}" data-modal-title="{{ survey_modal_title }}">
+                    {% else %}
+                        <a class="portfolio-item" href={{ "{}?lang={}".format(card["href"], lang) }}>
+                    {% endif %}
+                            <span class="caption">
+                              <span class="caption-content">
+                                <h2>{{ card["title"] }}</h2>
+                                  <p>{{ card["desc"] }}</p><p></p>
+                              </span>
+                            </span>
+                            <img alt="" class="img-fluid" src="{{ url_for('static', filename=card["img"]) }}">
+                        </a>
+				</div>
+                {% endfor %}
+			</div>
+		</div>
+	</section>
+
+
+    {##}
+
+    {#    {% include "question1_modal.html" %}#}
+    {#    {% include "question2_modal.html" %}#}
+
+{% endblock %}

@@ -1,0 +1,5 @@
+{"required": "Šį lauką būtina užpildyti",
+  "invalid": "Netinkamas pasirinkimas",
+  "multi_invalid": "Visi vertinimo laukai turėtų būti užpildyti",
+  "long_comment": "Laukas negali būti ilgesnis nei 300 simbolių"
+}

@@ -1,0 +1,22 @@
+{
+  "notify_btn_label": "Obavijesti partnera",
+  "passcode_form": {
+    "enter_pass_title": "Provjera kôda ",
+    "enter_pass_desc": "Upiši kôd koji si dobio/la od medicinskog djelatnika kako bi mogao/la koristiti notifikaciju partnera",
+    "enter_pass_fld_lbl": "Molimo te upiši kôd:",
+    "wrong_pass_error": "Lozinka koju si unio/la nije valjana ili je istekla",
+    "unauthenticated_error": "Not authenticated user",
+    "unauthorized_error": "Not authorized user"
+  },
+  "send_msg_form": {
+    "send_msg_explain": "Obavijesti osobe do kojih ti je stalo. Unesi valjani broj mobitela u prostor ispod i klikni “pošalji”. Niže se nalazi generička poruka koja će biti poslana tvom partneru",
+    "msg_template": "Tvoj nedavni spolni partner obavještava te da si mogao biti izložen spolno prenosivoj infekciji (uključujući HIV ili hepatitis). Preporučamo da se testiraš na sve spolno prenosive infekcije što ranije. Kako bi pronašao najbliže mjesto za testiranje posjeti [testfinder_link]\n  Ovo je pilot usluge za obavještavanje partnera projekta Zajedničke akcije INTEGRATE [integrateja_link]",
+    "integrateja_link": "https://www.integrateja.eu",
+    "testfinder_link": "http://83.212.115.126/testfinder",
+    "phone_fld_lbl": "+306999999999",
+    "msg_fld_lbl": "Default Message:",
+    "send_btn_lbl": "Pošalji",
+    "send_success": "Vaša je poruka uspješno poslana sljedećim brojevima",
+    "send_failure": "Žao mi je, ali vašu poruku nije bilo moguće poslati na sljedeće brojeve"
+  }
+}

@@ -1,0 +1,79 @@
+{% extends "prebase.html" %}
+{% block extra_scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/phone-numbers.js') }}"></script>
+{% endblock %}
+{% block form_modal %}
+    <div id="surveyModal">
+    {#      <div class="modal-dialog modal-dialog-centered" role="document">#}
+        <div class="survey-content col-8 offset-2">
+    {#        <div class="modal-content">#}
+    {#          <div class="modal-header">#}
+    {#            <h2 class="modal-title" id="surveyModalTitle" hidden></h2>#}
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" hidden>
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {#          </div>#}
+            <div class="sendmsg-body mx-3">
+                <form method="POST" action="" novalidate>
+                    <div class="mt-3 mb-4 text-justify">{{ loc_data.get("send_msg_explain") }}</div>
+                    <div class="mt-3">
+                        {{ form.csrf_token }}
+
+{#                        {% if form.phone_numbers.errors %}#}
+{#                        <ul class="errors">#}
+{#                            <li>{{ form_errors.get(form.phone_numbers.errors|first) }}</li>#}
+{#                        </ul>#}
+{#                        {% endif %}#}
+
+                        <ul class="list-inline">
+                            {% for field in form.phone_numbers %}
+                                {% set indx = loop.index0 %}
+                                {% if field.errors %}
+                                    <ul class="errors">
+                                        {% for ferr in field.errors %}
+                                            <li>{{ form_errors.get(ferr) }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                                <li class="list-inline-item mb-3" style="display: none">
+                                    <label for="phone_numbers-{{ indx }}">
+
+                                    </label>
+                                    {{ field(placeholder=loc_data.get("phone_fld_lbl")) }}
+                                    {% if indx!=4 %}
+                                        <button type="button" class="btn btn-sea-green btn-phone btn-add-phone">
+                                            <i class="fa fa-plus-circle"></i>
+                                        </button>
+                                    {% endif %}
+                                    {% if indx!=0 %}
+                                        <button type="button" class="btn btn-burnt-orange btn-phone btn-remove-phone">
+                                            <i class="fa fa-minus-circle"></i>
+                                        </button>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+
+                        {% if form.msg.errors %}
+                            <ul class="errors">
+                                {% for error in form.msg.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        <div class="mt-5 text-justify"><label for="msg">{{ loc_data.get("msg_fld_lbl") }}</label>{{ form.msg }}</div>
+
+                      <div id="submitBtnContainer"><button type="submit" class="btn btn-secondary mt-3">{{ loc_data.get("send_btn_lbl") }}</button></div>
+                    </div>
+                </form>
+            </div>
+        {#      <div class="modal-footer">#}
+        {#        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+        {#        <button type="button" class="btn btn-primary">Save changes</button>#}
+        {#      </div>#}
+    {#        </div>#}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{
+  "sidebar_title" : "Dijelovi alata",
+  "sidebar_items": [
+    {
+      "menu_item" : "Kalkulator rizika"
+    },
+    {
+      "menu_item" : "Dokumenti s informacijama"
+    },
+    {
+      "menu_item" : "Tuberkuloza"
+    },
+    {
+      "menu_item" : "PrEP"
+    },
+    {
+      "menu_item" : "N=N"
+    },
+    {
+      "menu_item" : "Evaluacijski upitnik"
+    },
+    {
+      "menu_item" : "Pronalazak testiranja"
+    },
+    {
+      "menu_item" : "Obavještavanje partnera"
+    },
+    {
+      "menu_item" : "O INTEGRATE JA"
+    },
+    {
+      "menu_item" : "Kontakt"
+    },
+    {
+      "menu_item" : "Početna stranica"
+    }
+  ],
+  "policies_acknowledgements": "Korištenjem naše web stranice, potvrđujete da ste pročitali i razumjeli našu |Politiku o kolačićima| i našu |Politiku privatnosti",
+  "survey_modal_title": "Vaše mišljenje je važno!",
+  "submit_btn_label": "Podnijeti",
+  "close_btn_label": "Zatvoriti",
+  "footer": "Zajedničku akciju INTEGRATE (Joint Action INTEGRATE) financira Europska unija unutar Trećeg zdravstvenog programa (2014.-2020.).",
+  "copyright": "Autorsko pravo © 2017 The INTEGRATE Consortium"
+
+}

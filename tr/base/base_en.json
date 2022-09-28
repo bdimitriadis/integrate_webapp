@@ -1,0 +1,45 @@
+{
+  "sidebar_title" : "Toolkit components",
+  "sidebar_items": [
+    {
+      "menu_item" : "Risk Calculator"
+    },
+    {
+      "menu_item" : "Factsheets"
+    },
+    {
+      "menu_item" : "Tuberculosis"
+    },
+    {
+      "menu_item" : "PrEP"
+    },
+    {
+      "menu_item" : "U=U"
+    },
+    {
+      "menu_item" : "Evaluation questionnaire"
+    },
+    {
+      "menu_item" : "Test Finder"
+    },
+    {
+      "menu_item" : "Partner Notification"
+    },
+    {
+      "menu_item" : "About INTEGRATE JA"
+    },
+    {
+      "menu_item" : "Contact"
+    },
+    {
+      "menu_item" : "Home"
+    }
+  ],
+  "policies_acknowledgements": "By using our site, you acknowledge that you have read and understand our |Cookies Policy| and our |Privacy Policy",
+  "survey_modal_title": "Your opinion matters!",
+  "submit_btn_label": "Submit",
+  "close_btn_label": "Close",
+  "footer": "The Joint Action INTEGRATE has received funding from the European Union, in the framework of the 3rd Health Programme (2014-2020). ",
+  "copyright": "Copyright © 2017 The INTEGRATE Consortium"
+
+}

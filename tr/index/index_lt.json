@@ -1,0 +1,40 @@
+{
+  "title": "INTEGRATE toolkit",
+  "content_heading": "Susipažinkite su naudingomis INTEGRATE priemonėmis",
+  "content_subheading": "PRIEMONIŲ RINKINIO DALYS",
+  "cards": [
+    {
+      "title": "RIZIKOS SKAIČIUOKLĖ",
+      "desc": "Atsakykite į kelis trumpus klausimus, kad suprastumėte, ar jums gresia pavojus!"
+    },
+    {
+      "title": "FAKTŲ SUVESTINĖS",
+      "desc": "Susipažinkite su kai kuriais pagrindiniais faktais apie ŽIV, virusinius hepatitus ir lytiškai plintančias infekcijas"
+    },
+    {
+      "title": "TUBERKULIOZĖ",
+      "desc": "Sužinokite apie tuberkuliozę"
+    },
+    {
+      "title": "PrEP",
+      "desc": "Sužinokite apie preekspozicinę profilaktiką"
+    },
+    {
+    "title": "U = U",
+    "desc": "Sužinokite, kodėl „Neaptinkamas = Neperduodamas“"
+    },
+    {
+      "title": "PRANEŠIMAS PARTNERIAMS",
+      "desc": "Tegul jūsų partneris (-iai) sužino, kad jis (-ie) galėjo užsikrėsti LPI"
+    },
+    {
+      "title": "TYRIMŲ PAIEŠKA",
+      "desc": "Raskite artimiausias vietas, kur galėtumėte nuvykti atlikti tyrimus"
+    },
+    {
+      "title": "VERTINIMO ANKETA",
+      "desc": "Praneškite mums savo nuomonę apie INTEGRATE priemonių rinkinį"
+    }
+  ]
+
+}

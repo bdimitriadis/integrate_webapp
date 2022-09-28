@@ -1,0 +1,6 @@
+{
+  "dialog_title": "Risk Calculator",
+  "dialog_info": "Answer a few questions to find out how often you should get tested",
+  "dialog_start_btn": "Start",
+  "result_lbl": "Result"
+}

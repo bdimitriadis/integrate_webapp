@@ -1,0 +1,40 @@
+{
+  "title": "INTEGRATE toolkit",
+  "content_heading": "Explore INTEGRATE's Risk Radar",
+  "content_subheading": "TOOLKIT COMPONENTS",
+  "cards": [
+    {
+      "title": "RISK CALCULATOR",
+      "desc": "Answer a few quick questions to see if you are at risk!"
+    },
+    {
+      "title": "FACTSHEETS",
+      "desc": "Explore some basic facts about HIV, viral hepatitis and other sexually transmitted diseases"
+    },
+    {
+      "title": "TUBERCULOSIS",
+      "desc": "Learn about tuberculosis"
+    },
+    {
+      "title": "PrEP",
+      "desc": "Find out about Pre-Exposure Prophylaxis"
+    },
+    {
+    "title": "U EQUALS U",
+    "desc": "Discover why Undetectable equals Untransmittable"
+    },
+    {
+      "title": "PARTNER NOTIFICATION",
+      "desc": "Let your partner(s) know they have been exposed to an STI"
+    },
+    {
+      "title": "TEST FINDER",
+      "desc": "Find locations near you to get tested"
+    },
+    {
+      "title": "EVALUATION QUESTIONNAIRE",
+      "desc": "Let us know your opinion about INTEGRATE toolkit"
+    }
+  ]
+
+}

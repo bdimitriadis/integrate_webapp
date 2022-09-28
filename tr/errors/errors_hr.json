@@ -1,0 +1,5 @@
+{
+   "404": "Ups, stranica nije pronađena (404)",
+   "405": "Ups, ta metoda nije dopuštena (405)",
+   "500": "Interna greška (500). Nisi ti, to sam ja :)"
+}

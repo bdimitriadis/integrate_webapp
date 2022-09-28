@@ -1,0 +1,31 @@
+{% extends "base.html" %}>
+{% block body %}
+    <div class="container-fluid content-section bg-secondary text-center text-md-center">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <span class="align-text-bottom"><h2>  {{ loc_data["title"] }} </h2></span>
+                <span class="align-text-bottom"><h6 style="color: #1F87B5"><em>{{ loc_data["subheading"] }}</em></h6></span>
+                <a href="https://integrateja.eu/" target="_blank" class="btn btn-xl btn-success mr-4 img-about"><i
+                        class="fas fa-globe-europe" aria-hidden="true"> {{ loc_data["button"] }}</i></a>
+            </div>
+
+        </div>
+    </div>
+    <p></p>
+
+
+    <div class="col-8 offset-2 h4-info">
+        {{ loc_data["content"]|safe }}
+    </div>
+
+    <p></p>
+    <div class="d-block text-center">
+        <img src="{{ url_for('static', filename='images/ToolsNew.png') }}">
+    </div>
+
+    <p></p>
+    </div>
+{% endblock %}

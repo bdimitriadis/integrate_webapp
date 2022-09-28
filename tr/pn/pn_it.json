@@ -1,0 +1,22 @@
+{
+  "notify_btn_label": "Informa un/a partner",
+  "passcode_form": {
+    "enter_pass_title": "Convalida del codice",
+    "enter_pass_desc": "Per essere autorizzato/a a informare i/le partner, dovrai inserire il codice che hai ricevuto dal  tuo medico o counsellor",
+    "enter_pass_fld_lbl": "Inserisci il tuo codice:",
+    "wrong_pass_error": "La password che hai inserito non è valida o è scaduta",
+    "unauthenticated_error": "Not authenticated user",
+    "unauthorized_error": "Not authorized user"
+  },
+  "send_msg_form": {
+    "send_msg_explain": "Informa le persone a cui tieni. Inserisci i loro numeri telefonici negli spazi sottostanti e premi il tasto Invia.   Qui di seguito puoi leggere il messaggio che riceveranno.",
+    "msg_template": "Un/a tuo/a precedente partner desidera informarti che potresti essere stato/a esposto/a a un’infezione sessualmente trasmissibile. Ti consigliamo quindi di sottoporti il prima possible ai test per le infezioni sessualmente trasmissibili. Per trovare un centro per i test nelle tue vicinanze, puoi consultare il [testfinder_link]\n Questo messaggio ti è stato inviato dal servizio di Partner Notification del progetto INTEGRATE JA [integrateja_link]",
+    "integrateja_link": "https://www.integrateja.eu",
+    "testfinder_link": "http://83.212.115.126/testfinder",
+    "phone_fld_lbl": "+306999999999",
+    "msg_fld_lbl": "Default Message:",
+    "send_btn_lbl": "Invia",
+    "send_success": "Il tuo messaggio è stato inviato correttamente al seguente numero",
+    "send_failure": "Siamo spiacenti ma non è stato possibile inviare il tuo messaggio ai seguenti numeri"
+  }
+}

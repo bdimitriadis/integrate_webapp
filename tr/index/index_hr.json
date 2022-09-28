@@ -1,0 +1,40 @@
+{
+  "title": "INTEGRATE toolkit",
+  "content_heading": "Istražite korisne INTEGRATE alate",
+  "content_subheading": "DIJELOVI ALATA",
+  "cards": [
+    {
+      "title": "KALKULATOR RIZIKA",
+      "desc": "Odgovorite na nekoliko kratkih pitanja kako biste saznali jeste li u riziku!"
+    },
+    {
+      "title": "DOKUMENTI S INFORMACIJAMA",
+      "desc": "Pronađite osnovne činjenice o HIV-u, virusnim hepatitisima i drugim spolno prenosivim infekcijama"
+    },
+    {
+      "title": "TUBERKULOZA",
+      "desc": "Naučite o tuberkulozi"
+    },
+    {
+      "title": "PrEP",
+      "desc": "Saznajte o predekspozicijskoj profilaksi"
+    },
+    {
+    "title": "U = U",
+    "desc": "Otkrijte zašto je Nemjerljivo jednako Nezarazno"
+    },
+    {
+      "title": "OBAVJEŠTAVANJE PARTNERA",
+      "desc": "Obavijestite partnera/e o izloženosti spolno prenosivoj infekciji"
+    },
+    {
+      "title": "PRONALAZAK TESTIRANJA",
+      "desc": "Pronađite lokacije za testiranje u svojoj blizini"
+    },
+    {
+      "title": "EVALUACIJSKI UPITNIK",
+      "desc": "Obavijestite nas o mišljenju o INTEGRATE alatu"
+    }
+  ]
+
+}

@@ -1,0 +1,10 @@
+{
+  "disclaimer_top": "<p>Sadržaj informacija o PrEP-u preuzet je s mrežnog mjesta <a href=\"http://www.prepineurope.org/en/faqs/\" target=\"_blank\"> Prep u Europi (PrEP in Europe)&nbsp;</a>, čije je autorsko pravo u vlasni&scaron;tvu Inicijative PrEP u Europi (PrEP in Europe Initiative).</p>",
+  "buttons": {
+    "PrEP": "Zašto PrEP?",
+    "DoesPrEPWork": "Funkcionira li PrEP?",
+    "IsPrEPWorthIt": "Je li PrEP vrijedan toga?",
+    "IntermittentPrEP": "Uzimanje PrEP-a po potrebi",
+    "PrEPWomen": "PrEP i žene"
+  }
+}

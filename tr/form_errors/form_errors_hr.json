@@ -1,0 +1,5 @@
+{"required": "Ovo polje je obavezno",
+  "invalid": "Nije valjan izbor",
+  "multi_invalid": "Sva polja za evaluaciju trebaju biti popunjena",
+  "long_comment": "Polje ne može biti duže od 300 znakova"
+}

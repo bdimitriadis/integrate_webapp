@@ -1,0 +1,9 @@
+{"required": "This field is required",
+  "all_fields_required": "All fields are required",
+  "invalid": "Not a valid choice",
+  "invalid_phone": "Invalid phone number",
+  "multi_invalid": "All evaluation fields should be filled in",
+  "long_comment": "Field cannot be longer than 300 characters",
+  "wrong_passcode_length": "Valid size is 32 characters (8 characters each field)",
+  "nonalphanumeric_passcode": "Your passcode should contain only letters and digits."
+}

@@ -1,0 +1,5 @@
+{"required": "Questo campo è obbligatorio.",
+  "invalid": "Non è una scelta valida",
+  "multi_invalid": "Tutti i campi di valutazione devono essere compilati",
+  "long_comment": "Il campo non può contenere più di 300 caratteri"
+}

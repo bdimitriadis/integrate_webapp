@@ -1,0 +1,5 @@
+{
+   "404": "Oi, puslapis nerastas (404)",
+   "405": "Oi, šis metodas neleidžiamas (405)",
+   "500": "Vidinė klaida (500). Tai ne tu, tai aš :)"
+}

@@ -1,0 +1,40 @@
+{
+  "title": "INTEGRATE toolkit",
+  "content_heading": "Esplora gli utili strumenti di INTEGRATE",
+  "content_subheading": "COMPONENTI DEL TOOLKIT",
+  "cards": [
+    {
+      "title": "HAI RISCHIATO?",
+      "desc": "Rispondi ad alcune veloci domande per verificare se sei a rischio!"
+    },
+    {
+      "title": "SCHEDE INFORMATIVE",
+      "desc": "Scopri alcune informazioni di base su HIV, epatiti virali e altre infezioni a trasmissione sessuale"
+    },
+    {
+      "title": "TUBERCOLOSI",
+      "desc": "Informati sulla tubercolosi"
+    },
+    {
+      "title": "PrEP",
+      "desc": "Scopri di più sulla profilassi pre-esposizione"
+    },
+    {
+    "title": "U = U",
+    "desc": "Scopri perché \"non rilevabile\" equivale a \"non trasmissibile\""
+    },
+    {
+      "title": "INFORMA I TUOI PARTNER",
+      "desc": "Informa i tuoi partner che sono stati esposti a una IST"
+    },
+    {
+      "title": "DOVE FARE I TEST?",
+      "desc": "Trova i centri in cui fare i test nella tua zona"
+    },
+    {
+      "title": "QUESTIONARIO DI VALUTAZIONE",
+      "desc": "Facci sapere la tua opinione su INTEGRATE toolkit"
+    }
+  ]
+
+}

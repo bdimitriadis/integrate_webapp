@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div class="text-center">
+        <form method="GET" action="" novalidate>
+            {{ form.csrf_token }}
+            <ul class="bg-dark text-dark list-inline text-center">
+                {% for field in form %}
+                    {% if field != form.csrf_token %}
+                        {% if field.errors %}
+                            <ul class="errors">
+                                <li>{{ field.errors }}</li>
+                            </ul>
+                        {% endif %}
+
+                        <li class="list-inline-item ml-3">
+                            {{ field.label }} {{ field }}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </form>
+    </div>
+
+    <!-- Map -->
+    <section id="tfmap" class="map text-center">
+        <div id="map" style="height:25rem;" class="col-6 offset-3 mb-2"></div>
+        <p><input id="reset" class="btn-dark btn-lg mt-1" type="submit" value="{{ loc_data["reset_btn"] }}" /></p>
+
+        <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/test-finder-map.js') }}"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ loc_data.get('key') }}"></script>
+
+        <script type="text/javascript" src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+        <script>
+
+            {% for center in tf_data %}
+                {% set indx = loop.index %}
+                var center_{{ indx }} = '<div id="marker-popover">' +
+                        '<div id="siteNotice"></div>' +
+                            '<h5 id="firstHeading" class="firstHeading">{{ center.get("organisation_name") }}</h5>' +
+                            {#'<h6 id="bodyContent">' +#}
+                            {%  if center.get("address_primary") %}
+                                '<p><i class="fas fa-location-arrow"></i> {{ center.get("address_primary") }}</p>' +
+                            {% endif %}
+                            {%  if center.get("website") %}
+                                    '<p><i class="fas fa-globe"></i> <a target="_blank" {% if "http" in center.get("website") %}href=\"{{ center.get("website") }}\"{% endif %}>{{ center.get("website") }}</a> '+
+                            {% endif %}
+                            {%  if center.get("email") %}
+                                '<p><i class="fas fa-envelope"></i> <a href="mailto:{{ center.get("email") }}">{{ center.get("email") }}</a></p>'+
+                            {% endif %}
+                            {%  if center.get("telephone") %}
+                                '<p><i class="fas fa-phone-volume"></i> <a href="tel: {{ center.get('phone_no') }}"> {{ center.get("telephone") }}</a></p>'+
+                            {% endif %}
+                    {#'</h6>'+#}
+                    '</div>';
+            {% endfor %}
+
+            var all_locations = [
+                {% for center in tf_data %}
+                    {% set indx = loop.index %}
+                        {
+                            lat: {{ center.get("latitude") }},
+                            lng: {{ center.get("longitude") }},
+                            info: center_{{ indx }},
+                            testing_hiv: {{ center.get("testing_hiv") }},
+                            testing_hepc: {{ center.get("testing_hepc") }},
+                            testing_sti: {{ center.get("testing_sti") }},
+                        },
+                {% endfor %}
+            ];
+
+            var locations = all_locations;
+            var init_country = "{{ loc_data["init_country"] }}";
+
+            testFinderMap({{ loc_data['lat'] }}, {{ loc_data['lng'] }}, {{ loc_data['zoom'] }});
+        </script>
+
+    </section>
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{
+  "notify_btn_label": "Pranešti partneriui (-iams)",
+  "passcode_form": {
+    "enter_pass_title": "Kodo patvirtinimas",
+    "enter_pass_desc": "Tam, kad galėtumėte pranešti partneriui, turite įvesti kodą, kurį gavote iš gydytojo",
+    "enter_pass_fld_lbl": "Prašome įvesti savo kodą:",
+    "wrong_pass_error": "Įvestas slaptažodis neteisingas arba jo galiojimo laikas pasibaigęs",
+    "unauthenticated_error": "Not authenticated user",
+    "unauthorized_error": "Not authorized user"
+  },
+  "send_msg_form": {
+    "send_msg_explain": "Praneškite žmonėms, kurie jums tikrai rūpi. Įveskite galiojantį telefono numerį į žemiau esantį teksto lauką ir spauskite „Siųsti“. Žemiau pateiktas numatytasis pranešimas, kuris bus išsiųstas jūsų partneriui.",
+    "msg_template": "Buvęs lytinis partneris praneša jums, kad jūs galėjote užsikrėsti lytiškai plintančia infekcija (įskaitant ŽIV ar hepatitą). Rekomenduojama kuo greičiau pasitikrinti dėl šių infekcijų. Norėdami rasti artimiausią tyrimų vietą, apsilankykite Tyrimų paieškos sistemoje [testfinder_link]\n Tai yra projekto INTEGRATE JA bandomoji partnerių informavimo paslauga [integrateja_link]",
+    "integrateja_link": "https://www.integrateja.eu",
+    "testfinder_link": "http://83.212.115.126/testfinder",
+    "phone_fld_lbl": "+306999999999",
+    "msg_fld_lbl": "Default Message:",
+    "send_btn_lbl": "Siųsti",
+    "send_success": "Jūsų pranešimas buvo tinkamai išsiųstas šiuo numeriu",
+    "send_failure": "Atsiprašome, bet jūsų pranešimas negalėjo būti išsiųstas šiais numeriais"
+  }
+}

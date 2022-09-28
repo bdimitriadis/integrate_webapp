@@ -1,0 +1,45 @@
+{
+  "sidebar_title" : "Priemonių rinkinio dalys",
+  "sidebar_items": [
+    {
+      "menu_item" : "Rizikos skaičiuoklė"
+    },
+    {
+      "menu_item" : "Faktų suvestinės"
+    },
+    {
+      "menu_item" : "Tuberkuliozė"
+    },
+    {
+      "menu_item" : "PrEP"
+    },
+    {
+      "menu_item" : "U=U"
+    },
+    {
+      "menu_item" : "Vertinimo anketa"
+    },
+    {
+      "menu_item" : "Tyrimų paieška"
+    },
+    {
+      "menu_item" : "Pranešimas partneriams"
+    },
+    {
+      "menu_item" : "Apie INTEGRATE JA"
+    },
+    {
+      "menu_item" : "Kontaktai"
+    },
+    {
+      "menu_item" : "Pradžia"
+    }
+  ],
+  "policies_acknowledgements": "Naudodamiesi mūsų svetaine, jūs pripažįstate, kad perskaitėte ir supratote mūsų |slapukų politiką| ir mūsų |privatumo politiką",
+  "survey_modal_title": "Tavo nuomonė svarbi!",
+  "submit_btn_label": "Pateikti",
+  "close_btn_label": "Uždaryti",
+  "footer": "Bendrųjų veiksmų projektas INTEGRATE gavo Europos Sąjungos finansavimą pagal trečiąją Sąjungos veiksmų sveikatos srityje programą (2014–2020 m.).",
+  "copyright": "Copyright © 2017 INTEGRATE konsorciumas"
+
+}

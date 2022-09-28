@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{#{% block extra_scripts %}#}
+{#    <script src="{{ url_for('static', filename='js/risk-classes-iconed.js') }}"></script>#}
+{#{% endblock %}#}
+{% block body %}
+    <div>
+    <h1 id="questionModalLabel" class="ml-2"> {{ risk["dialog_title"] }}</h1>
+        <div>
+            <div id="questions_box" class="mt-5 bg-secondary">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center mt-3 bg-secondary">
+                {% if data["data"]["answer"] %}
+                    <form action="" method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                        <h3>{{ risk["result_lbl"] }}:</h3>
+                        <div class="text-justify col-6 offset-3">{{ data["data"]["answer"]|safe }}
+                        </div>
+                        <div>
+                            {% for link in data["data"]["links"] %}
+                                {% set indx = loop.index0 %}
+                                {#                        {% for lnk_key, lnk_val in link.items() %}#}
+                                <input class="btn-lg mt-3 ml-5 mr-5 {{ data["link-colors"][indx] }}" type="submit" name="{{ link["link"] }}" value="{{ link["label"] }}">
+                                {#                        {% endfor %}#}
+                            {% endfor %}
+                        </div>
+
+                    </form>
+                {% else %}
+                    <form action="" method="POST">
+                        <div>
+                            <h3>{{ data["data"]["question"] }}</h3>
+                        </div>
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                        <input type="hidden" name="path" id="path" value="{{ data["path"] }}" />
+                        <div class="mt-4">
+                            {% for option in data["data"]["options"] %}
+                                {% set indx = loop.index0 %}
+                                {% for opt_key, opt_val in option.items() %}
+                                    <input class="btn-lg mr-5 mt-3 {{ data["btn-colors"][indx] }}" type="submit" name="{{ opt_key }}" value="{{ opt_val }}">
+                                {% endfor %}
+                            {% endfor %}
+                        </div>
+
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+        {#    <div class="modal-footer">#}
+{#    </div>#}
+</div>
+{% endblock %}

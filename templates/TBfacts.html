@@ -1,0 +1,32 @@
+{% extends "base.html" %}>
+
+{% block body %}
+
+   <div class="container-fluid content-section bg-secondary text-center text-md-center">
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <span class="align-text-bottom"><h2> {{ loc_data["title"] }} </h2></span>
+          <span class="align-text-bottom"><h6 style="color: #1F87B5"><em>{{ loc_data["disclaimer_top"] }}</em></h6></span>
+        </div>
+
+  		</div>
+	</div>
+
+	<p></p>
+	<a href="{{ url_for('static', filename='images/TB/TB_{}_lg.png'.format(lang)) }}" class="d-block text-center img-link">
+	    	<img src="{{ url_for('static', filename='images/TB/TB_{}.png'.format(lang)) }}" class="img-fluid" >
+	    </a>
+
+	<p></p>
+	   <div class="container-fluid text-center text-md-center bg-secondary">
+
+      <div class="row">
+
+        <div class="col-md-12">
+	<h6 style="color: #1F87B5">
+		<em>{{ loc_data["disclaimer_bottom"] }}</em>
+	</h6></div></div></div>
+{% endblock %}

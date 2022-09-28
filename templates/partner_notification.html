@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="col-8 offset-2 mt-3">
+        <div class="text-left">
+            <a type="button" class="btn btn-secondary mr-3 ls-modal" href="#" data-target="/passvalidation" data-modal-title="{{ enter_pass_title }}">
+                <i class='fa fa-envelope faa-shake animated fa-2x'></i>
+                <span class="ml-2">{{ notify_btn_label }}</span>
+            </a>
+        </div>
+
+        <div class="mt-3">{{ faq_txt|safe }}</div>
+    </div>
+{% endblock %}

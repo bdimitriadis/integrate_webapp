@@ -1,0 +1,164 @@
+{% extends "base.html" %}>
+{% block body %}
+   <div class="container-fluid content-section bg-secondary text-center text-md-center">
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <span class="align-text-bottom"><h2>  {{ loc_data["title"] }} </h2></span>
+          <span class="align-text-bottom"><h6 style="color: #1F87B5"><em>{{ loc_data["disclaimer_top"] }}</em></h6></span>
+        </div>
+
+  		</div>
+	</div>
+	<p></p>
+    <div class="col-8 offset-2">
+        <ul class="nav nav-tabs ml-5 mr-5" id="myTab" role="tablist">
+            {% for tab in loc_data["tabs"] %}
+                <li class="nav-item">
+                    <a class="nav-link {% if tab["id"] in ["HIV"] %}active{% endif %}" id="{{ tab["id"] }}-tab" data-toggle="tab" href="#{{ tab["id"] }}" role="tab" aria-controls="{{ tab["id"] }}" aria-selected="true">{{ tab["tab_title"] }}</a>
+                </li>
+            {% endfor %}
+    {#	  <li class="nav-item">#}
+    {#	    <a class="nav-link" id="hepA-tab" data-toggle="tab" href="#hepA" role="tab" aria-controls="hepA" aria-selected="false">Hepatitis A</a>#}
+    {#	  </li>#}
+    {#	  <li class="nav-item">#}
+    {#	    <a class="nav-link" id="hepB-tab" data-toggle="tab" href="#hepB" role="tab" aria-controls="contact" aria-selected="false">Hepatitis B</a>#}
+    {#	  </li>#}
+    {#	  	  <li class="nav-item">#}
+    {#	    <a class="nav-link" id="hepC-tab" data-toggle="tab" href="#hepC" role="tab" aria-controls="hepC" aria-selected="true">Hepatitis C</a>#}
+    {#	  </li>#}
+    {#	  <li class="nav-item">#}
+    {#	    <a class="nav-link" id="chlamydia-tab" data-toggle="tab" href="#chlamydia" role="tab" aria-controls="chlamydia" aria-selected="false">Chlamydia</a>#}
+    {#	  </li>#}
+    {#	  <li class="nav-item">#}
+    {#	    <a class="nav-link" id="gonorrhoea-tab" data-toggle="tab" href="#gonorrhoea" role="tab" aria-controls="gonorrhoea" aria-selected="false">Gonorrhoea</a>#}
+    {#	  </li>#}
+    {#	  	  <li class="nav-item">#}
+    {#	    <a class="nav-link" id="syphilis-tab" data-toggle="tab" href="#syphilis" role="tab" aria-controls="syphilis" aria-selected="false">Syphilis</a>#}
+    {#	  </li>#}
+    {#	  <li class="nav-item">#}
+    {#          <a class="nav-link" id="LGV-tab" data-toggle="tab" href="#LGV" role="tab" aria-controls="LGV"#}
+    {#             aria-selected="false">LGV</a>#}
+    {#	  </li>#}
+        </ul>
+        <div class="tab-content ml-5 mr-5" id="myTabContent">
+            {% for tab in loc_data["tabs"] %}
+            <div class="tab-pane fade show {% if tab["id"]=="HIV" %}active{% endif %}" id="{{ tab["id"] }}" role="tabpanel" aria-labelledby="{{ tab["id"] }}-tab">
+                {{ tab["html"]|safe }}
+            </div>
+            {% endfor %}
+    {#	  <div class="tab-pane fade" id="hepA" role="tabpanel" aria-labelledby="hepA-tab">#}
+    {#	  	<p></p>#}
+    {#	  	<p>Hepatitis A is an acute infection of the liver caused by a small, non-enveloped hepatotropic virus.</p>#}
+    {#		    <h4>Clinical features</h4>#}
+    {#		    <p>The disease is often asymptomatic or mild, particularly in children under five years. In adults, the onset of illness is usually abrupt with fever, malaise and abdominal discomfort. Jaundice is the predominant symptom. Symptoms may last from one or two weeks to months. Prolonged, relapsing hepatitis for up to one year occurs in 15% of cases. No chronic infection is known to occur and infection confers lifelong immunity.The case-fatality ratio is low (0.1–0.3%) but might be higher (1.8%) in adults over 50 years of age or persons with underlying chronic liver disease.</p>#}
+    {#		    <h4>Transmission</h4>#}
+    {#		    <p>Hepatitis A is highly transmissible and has an average incubation period of 28 to 30 days (range 15–50 days). The maximum infectivity is during the second half of the incubation period (i.e. while asymptomatic) and most cases are considered non-infectious after the first week of jaundice. HAV can be transmitted through contaminated water, food and via the faecal–oral route among close contacts (e.g. household contacts, sexual contacts, day-care centres or schools) [4-6]. The following risk factors or risk groups have also been associated with illness in outbreaks: use of contaminated blood products, people who inject drugs or use other illicit drugs, men having sex with men (MSM), and homeless people. The virus is very resistant in the environment as well as to several preservation methods used in the food industry, e.g. acidification or freezing, thus possible food-borne transmission should be investigated when several cases are reported within a short time period.</p>#}
+    {#		    <h4>Case management and treatment</h4>#}
+    {#		    <p>No pharmacological treatment exists, patients recover spontaneously.</p>#}
+    {#		    <h4>Personal protection and prevention</h4>#}
+    {#		    <p>Several inactivated vaccines are available for prevention, all showing very high efficacy. Active (antigen) and passive (antisera) immunisation is effective if administered within two weeks of exposure. Strict control measures, such as reinforcing personal hygiene, contact tracing and administration of vaccine to exposed persons, have proved to be effective.</p>#}
+    {#	  </div>#}
+    {#	  <div class="tab-pane fade" id="hepB" role="tabpanel" aria-labelledby="hepB-tab">#}
+    {#	  	<p></p>#}
+    {#	  	<p>Hepatitis B is a liver disease that results from infection with the hepatitis B virus (HBV) and is spread through contact with infected body fluids or blood products. Following acute infection with HBV, some people go on to develop a chronic infection.</p>#}
+    {#		    <h4>Transmission routes and symptoms</h4>#}
+    {#		    <p>Hepatitis B is spread through contact with contaminated body fluids. Most infections occur by coming into contact with infected blood but semen, saliva and cervical secretions can also be infectious.The virus can live on surfaces for at least seven days which means it can be transmitted via objects that have been contaminated with infected body fluids (e.g. used needles). Sexual transmission and injecting drug use are the most common current routes of transmission in Europe. Transmission may also occur in healthcare settings due to the reuse or inadequate sterilisation of medical equipment, especially syringes and needles. Transmission via blood transfusion or through the use of plasma-derived products is now rare in Europe due to effective blood safety programmes. Whilst many individuals have no symptoms associated with the acute infection, those who do may experience tiredness, loss of appetite, abdominal discomfort, nausea, vomiting and fever. The development of chronic HBV infection is inversely associated with the age at which the individual is infected. Up to 90% of infants who are infected with the virus develop chronic infections but less than 5% of infected adults develop chronic infection. Individuals with chronic HBV infection are at a higher risk of complications including liver cirrhosis (25%) and cancer (5%). In addition, they may be at risk of transmitting the infection to others. Thanks to testing programmes during pregnancy and vaccination at birth, perinatal HBV transmission now only occurs rarely in Europe but remains one of the major routes of transmission globally. High level of protection: the hepatitis B vaccine The hepatitis B vaccine is the mainstay of hepatitis B prevention. Safe and effective vaccines are available that offer high levels of protection and most countries in Europe have implemented a universal vaccination programme. With evidence of on-going transmission and continuing importation of cases, these vaccination programmes are essential in order to achieve the target of hepatitis elimination by 2030. In addition to vaccination programmes the implementation of blood safety strategies and safe injection practices can prevent transmission of HBV. Safer sex practices can also protect against transmission.</p>#}
+    {#	  </div>#}
+    {#	  <div class="tab-pane fade show" id="hepC" role="tabpanel" aria-labelledby="hepC-tab">#}
+    {#	  	<p></p>#}
+    {#	  	<p>Hepatitis C is a liver disease caused by infection with the hepatitis C virus (HCV). HCV can cause both acute and chronic hepatitis infection, ranging in severity from a mild illness that lasts only a few weeks to a serious, lifelong illness resulting in cirrhosis and liver cancer. The virus is mainly acquired by contact through broken skin with infectious blood. In Europe, the main route of HCV transmission is via injecting drug use as a result of sharing contaminated needles. More rarely, the virus can be transmitted sexually, in healthcare settings due to inadequate infection control practices or perinatally from an infected mother to the baby. Most people with acute HCV infection do not have any symptoms. Those who develop chronic infection are often asymptomatic until decades after infection when symptoms develop secondary to serious liver damage. Around 30% of people with chronic hepatitis C suffer from liver damage and a small number of those develop cancer. Hepatitis C is considered to be one of the leading causes of liver cancer and liver transplants in Europe. HCV is a virus that is acquired through the blood. About a fifth of the people who get the virus (called “acute hepatitis C infection”) clear it from their bodies without needing treatment, and sometimes without getting any symptoms. If the infection lasts for longer than six months it is called “chronic hepatitis C infection” and treatment may be needed.#}
+    {#			</p>#}
+    {#		    <h4>Symptoms</h4>#}
+    {#		    <p>Most people with acute hepatitis C infection do not have any symptoms. Those who do can experience fatigue and jaundice (a yellowing of the skin and eye-balls). People who develop chronic hepatitis C also may never have any symptoms. Others may have no symptoms for many years. Those who develop symptoms tend to suffer general conditions like fatigue, nausea and abdominal discomfort. Around 30% of people with chronic hepatitis C develop liver damage (called cirrhosis) and a small number of those go on to get cancer.</p>#}
+    {#		    <h4>Transmission</h4>#}
+    {#		    <p>Hepatitis C is passed on through infected blood. Most people in Europe who get hepatitis C are injecting drug users who have caught the infection by sharing contaminated needles. Hepatitis C can also be passed on by tattooing, body piercing and acupuncture, if these are done in unsterile conditions. Pregnant women with hepatitis C may pass the infection on to their babies. In the past, blood transfusions could be a way of catching hepatitis C. Now, all blood donors should be screened and all blood products tested to stop this from happening. People on renal dialysis may be at higher risk.</p>#}
+    {#		    <h4>People most at risk</h4>#}
+    {#		    <p>Anyone can get hepatitis C if they have under-the-skin contact with contaminated blood. However, the main risk groups include injecting drug users, people who have received unscreened blood transfusions or products in the past, those on dialysis and babies born to hepatitis C infected mothers. There is a low risk of catching the infection by living in the same household as someone with hepatitis C and sharing items like toothbrushes, razors or hair clippers which could carry contaminated blood or by regular sexual contact with an infected person. Healthcare workers also have a low risk of getting the infection from accidents involving contaminated needles or other equipment.</p>#}
+    {#		    <h4>Diagnosis</h4>#}
+    {#		    <p>Hepatitis C is diagnosed by a blood test. Having a test should be discussed with a primary care doctor before and after testing. People with severe or longer lasting disease should be seen and assessed by a liver specialist.</p>#}
+    {#		    <h4>Treatment</h4>#}
+    {#		    <p>Hepatitis C is treated by a combination of drugs for a specific period of time, although medical experts are still developing the best treatment and regimes may vary. The infection can be cured, especially if it is detected and treated with the appropriate antiviral drug combinations. Antiviral treatment can now cure over 90% of persons with HCV infection. People who develop serious liver disease may need a transplant.</p>#}
+    {#		    <h4>Prevention</h4>#}
+    {#		    <p>In terms of prevention, there is currently no effective vaccine available against hepatitis C and the most effective preventive measures to reduce the risk of exposure to HCV include education, harm reduction programmes targeted towards people who inject drugs and the implementation of robust infection control practices in healthcare settings. People in the at-risk groups noted above should be regularly tested so they can be quickly diagnosed and treated if they catch hepatitis C. Precautions should be taken, especially in healthcare, tattooing, acupuncture and body piercing premises, to reduce the risk of coming in to contact with any blood in case it is infected. Some countries routinely test pregnant women for hepatitis C so they can be treated and their babies protected if they have the infection. Injecting drug users should receive education and help to support them in using clean needles, stop sharing equipment or quit injecting altogether.</p>#}
+    {#		    <h4>What to do if you have hepatitis C</h4>#}
+    {#		    <p>People with hepatitis C do not need to be isolated. Alcohol consumption should be stopped or reduced. Infected people should not donate blood or carry an organ donor card. They can reduce the chances of passing the infection to others by not sharing needles, razors, toothbrushes. The need to test family members or other close contacts should be discussed with a healthcare professional.</p>#}
+    {#	  </div>#}
+    {#	  <div class="tab-pane fade" id="chlamydia" role="tabpanel" aria-labelledby="chlamydia-tab">#}
+    {#	  	<p></p>#}
+    {#	  	<p>Genital chlamydia is a sexually transmitted infection caused by the Chlamydia trachomatis bacterium. Sexually active young people are most at risk of chlamydia, and women below 24 years of age have the highest number of infections in Europe. The number of Chlamydia infections is increasing in Europe:  there are now more than 250 000 new cases reported each year. Many Chlamydia infections do not produce symptoms, and the growing number of reported cases is likely to be the result of increased awareness about the disease and intensified testing. Chlamydia trachomatis infections can cause long-term complications in women even when they do not produce symptoms of acute disease. The most common complications are pelvic inflammatory disease (PID) and salpingitis, conditions that can lead to infertility and extra-uterine pregnancies. This risk of long-term reproductive health problems associated with C. trachomatis infections has lead some European countries to routinely offer testing for chlamydia to sexually active young people in an attempt to reduce the spread of the disease.</p>#}
+    {#		    <h4>Transmission</h4>#}
+    {#		    <ul>#}
+    {#		    	<li>Chlamydia infection is predominantly transmitted through sexual intercourse but may also be transmitted from mother to a newborn child during delivery. </li>#}
+    {#		    	<li>The incubation from infection to first symptoms is one to three weeks.</li>#}
+    {##}
+    {#		    </ul>#}
+    {#		    <h4>Prevention</h4>#}
+    {#		    <ul>#}
+    {#		    	<li>No vaccine is available against C. trachomatis.</li>#}
+    {#		    	<li>Consistent condom use outside of monogamous relationships is the most effective primary prevention.</li>#}
+    {#		    	<li>Chlamydia control relies on effective secondary prevention and include:#}
+    {#		    			Easy access to counselling and testing for symptomatic sexually transmitted infections.#}
+    {#		    			Opportunistic testing and screening of sexually active young people.#}
+    {#		    			Effective partner management of diagnosed cases.</li>#}
+    {#		    	<li>It has been shown that active screening for genital chlamydia infection can reduce the incidence of PID.</li>#}
+    {#		    </ul>#}
+    {#		    <h4>Management and Treatment</h4>#}
+    {#		    <ul>#}
+    {#		    	<li>Chlamydia is effectively treated with antibiotics and doxycycline and azithromycin typically have cure rates of 95% for uncomplicated chlamydia. </li>#}
+    {#		    	<li>Control of infection is centred on case management, partner treatment, health promotion activities and the use of barriers such as condoms.</li>#}
+    {#		    	<li>Pregnant patients with uncomplicated chlamydia can be treated with amoxicillin or erythromycin.</li>#}
+    {#		    </ul>#}
+    {#	  </div>#}
+    {#	  <div class="tab-pane fade" id="gonorrhoea" role="tabpanel" aria-labelledby="gonorrhoea-tab">#}
+    {#	  	<p></p>#}
+    {#	  	<p>Gonorrhoea is a sexually transmitted infection (STI) caused by Neisseria gonorrhoeae bacteria. Urethral infections in men and uro-genital infections in women are the main presenting feature, but a broad spectrum of clinical presentations can occur, including systemic dissemination with fever and skin and joint involvement. Throat and ano-rectal infections also occur. Urethral symptoms and vaginal discharge may appear after a short incubation (2–7 days following exposure), but in women cervicitis may remain without symptoms. Once a diagnosis is made, uncomplicated gonorrhoea is usually cured by a single dose of a suitable antibiotic. Partner notification and treatment is essential to curtail transmission. Gonorrhoea is a sexually transmitted infection caused by bacteria called Gonococci that can only live inside the human body.#}
+    {#			</p>#}
+    {#		    <h4>Symptoms</h4>#}
+    {#		    <p>Women may experience a yellow or bloody discharge and find urination painful. However, many women with gonorrhoea will have no or mild symptoms. Men may experience a burning sensation when urinating and a pus-like discharge from the penis. It may take anywhere from three to 14 days after sexual contact with an infected person to develop symptoms. However, some infected people may not develop any symptoms but can still transmit the infection to sexual partners. Untreated cases may remain infectious from six months to more than one year.</p>#}
+    {#		    <h4>Complications</h4>#}
+    {#		    <p>If left untreated, women can develop pelvic inflammatory disease (PID) as the infection spreads further in the upper genital tract. PID may cause pelvic pain, discharges and bleeding but may also be without specific symptoms. If the infection goes untreated, it can spread further in to the fallopian tubes and lead to ectopic pregnancy or infertility. The infection can then spread even further and affect the abdomen and liver.</p>#}
+    {#		    <h4>Ways to catch gonorrhoea</h4>#}
+    {#		    <p>Gonorrhoea is transmitted through sexual contact including sex without using a condom, vaginal intercourse, anal and oral sex. During sexual intercourse, gonorrhoea is more likely to be transmitted from men to women than from women to men. The infection can also be transmitted from mother-to-child during childbirth.</p>#}
+    {#		    <h4>People most at risk</h4>#}
+    {#		    <p>Those who have had gonorrhoea infection in the past may be re-infected in the future. People particularly at risk include those who have multiple sexual partners and concurrent partnerships; people who don’t use condoms; people whose partners are infected or who have partners with risky sexual behaviour; young people, particularly those under the age of 25; men who have sex with men (MSM); people with a history of sexually transmitted infections or who are HIV positive and; commercial sex workers.</p>#}
+    {#		    <h4>Treatment</h4>#}
+    {#		    <p>Gonorrhoea is caused by bacteria and therefore can be treated with antibiotics. Anyone infected with gonorrhoea should be treated immediately to reduce the chance of spreading the infection further and getting complications. Ideally, all of a patient’s recent sexual partners should also be treated immediately.</p>#}
+    {#		    <h4>How to avoid getting gonorrhoea</h4>#}
+    {#		    <p>Using a condom and avoiding risky sexual behaviours, like having lots of partners, can protect against getting STIs, including gonorrhoea.</p>#}
+    {#		</div>#}
+    {#	  <div class="tab-pane fade" id="syphilis" role="tabpanel" aria-labelledby="syphilis-tab">#}
+    {#	  	<p></p>#}
+    {#	  	<p>Syphilis is a sexually transmitted infection caused by the bacterium Treponema pallidum. It may also be transmitted mother-to-child (congenital syphilis). Humans are the only reservoir and, apart from congenital cases, the only epidemiologically relevant mode of transmission is by direct contact with treponema-rich, open lesions and contaminated secretions from a patient. After an incubation period of 10 to 90 days (three weeks on average) clinical symptoms appear: at first a primary lesion at the site of infection (chancre), then a series of eruptions on mucous membranes and skin (secondary syphilis), followed by long periods of latency (latent or tertiary syphilis). If untreated, many years after the initial infection, tertiary syphilis lesions might finally appear (visceral, multi-organ involvement, including serious vascular and neurological damage). Mother-to-child transmission might result in foetal death, perinatal death or congenital syphilis. The latter can be without symptoms or present stigmata or determine multi-organ pathology.#}
+    {#	  	With the widespread use of penicillin, syphilis prevalence had significantly declined after World War II. However, in several industrialized countries a considerable resurgence occurred in the late 1980.#}
+    {#			</p>#}
+    {#		</div>#}
+    {#			  <div class="tab-pane fade" id="LGV" role="tabpanel" aria-labelledby="LGV-tab">#}
+    {#			  	<p></p>#}
+    {#                  <p>Lymphogranuloma Venereum (LGV) is a systemic STI caused by a specific type of Chlamydia#}
+    {#                      trachomatis. LGV rarely occurs in the Western world and cases are likely imported from Africa,#}
+    {#                      South-East Asia and the Carribean region. The classical picture of LGV involves genital#}
+    {#                      ulceration, adenopathy and is characterized by buboes. Since 2003 a series of outbreaks have been#}
+    {#                      reported in large European cities among men who have sex with men. Most cases presented with#}
+    {#                      severe proctitis which is associated with unprotected anal intercourse. Genotyping is needed to#}
+    {#                      confirm infection with serovars L1-L3. Sexual partners should be evaluated to prevent further#}
+    {#                      spread of disease. LGV can be cured with antibiotic treatment for 3 weeks followed by test of#}
+    {#                      cure.#}
+    {#			</p>#}
+    {#		</div>#}
+
+          </div>
+	</div>
+
+	<p></p>
+	   <div class="container-fluid text-center text-md-center bg-secondary">
+
+      <div class="row">
+
+        <div class="col-md-12">
+	<h6 style="color: #1F87B5">
+		<em>{{ loc_data["disclaimer_bottom"] }}</em>
+	</h6></div></div></div>
+{% endblock %}

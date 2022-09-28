@@ -1,0 +1,46 @@
+{% extends "base.html" %}>
+{% block body %}
+    <div class="container-fluid content-section bg-secondary text-center text-md-center">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <span class="align-text-bottom"><h2>   </h2></span>
+                <span class="align-text-bottom"><h6 style="color: #1F87B5"><em>{{ loc_data["disclaimer_top"]| safe }}</em></h6></span>
+            </div>
+        </div>
+    </div>
+    <p></p>
+
+    <div class="col-8 offset-2 h2">
+        <p> {{ loc_data['title'] }} </p>
+    </div>
+
+    <div class="col-8 offset-2 h4-info">
+
+        <p>{{ loc_data['html'] | safe }}</p>
+
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="center-block"></div>
+        </div>
+        <div class="row">
+            {% for btn_href, (btn_text, btn_color) in loc_data["buttons"].items() %}
+            <div class="col-xs-12 col-md-3 brd">
+                <a href="/{{ btn_href }}" rel="keep-params">
+                        <button type="button" class="btn {{ btn_color }} btn-lg btn-prep" aria-label="Left Align">
+                            {{ btn_text }}
+                        </button>
+                    </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+{% endblock %}

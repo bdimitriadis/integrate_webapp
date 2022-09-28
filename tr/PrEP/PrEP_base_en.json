@@ -1,0 +1,10 @@
+{
+  "disclaimer_top": "<p>The contents of the PrEP section have been extracted from the <a href=\"http://www.prepineurope.org/en/faqs/\" target=\"_blank\"> PrEP in Europe website</a>, whose copyright is owned by the PrEP in Europe Initiative.</p>",
+  "buttons": {
+    "PrEP": "Why PrEP",
+    "DoesPrEPWork": "Does PrEP Work?",
+    "IsPrEPWorthIt": "Is PrEP Worth It?",
+    "IntermittentPrEP": "Intermittent PrEP",
+    "PrEPWomen": "PrEP and Women"
+  }
+}

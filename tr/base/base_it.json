@@ -1,0 +1,45 @@
+{
+  "sidebar_title" : "Componenti dell’ICT Tool",
+  "sidebar_items": [
+    {
+      "menu_item" : "Calcolatore di rischio"
+    },
+    {
+      "menu_item" : "Schede informative"
+    },
+    {
+      "menu_item" : "Tubercolosi"
+    },
+    {
+      "menu_item" : "PrEP"
+    },
+    {
+      "menu_item" : "U=U"
+    },
+    {
+      "menu_item" : "Questionario di valutazione"
+    },
+    {
+      "menu_item" : "Dove fare il test"
+    },
+    {
+      "menu_item" : "Informare i partner"
+    },
+    {
+      "menu_item" : "Informazioni sul INTEGRATE"
+    },
+    {
+      "menu_item" : "Contatti"
+    },
+    {
+      "menu_item" : "Home"
+    }
+  ],
+  "policies_acknowledgements": "Utilizzando il nostro sito, riconosci di aver letto e compreso la nostra |politica sui cookie| e la nostra |politica sulla privacy",
+  "survey_modal_title": "La tua opinione conta!",
+  "submit_btn_label": "Inviare",
+  "close_btn_label": "Chiudere",
+  "footer": "Il progetto INTEGRATE è stato cofinanziato dall'Unione Europea nell’ambito del terzo programma sanitario (2014-2020).",
+  "copyright": "Copyright © 2017 The INTEGRATE Consortium"
+
+}

@@ -1,0 +1,82 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#    <head>#}
+{#        <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">#}
+{##}
+{#        <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>#}
+{#        <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>#}
+{#        <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>#}
+{#        <script src="{{ url_for('static', filename='js/stylish-portfolio.min.js') }}"></script>#}
+{##}
+{#        <script src="{{ url_for('static', filename='js/conditional-action-question.js') }}"></script>#}
+{#    </head>#}
+{#    <body>#}
+{#        #}
+{##}
+{#    </body>#}
+{#</html>#}
+{% extends "prebase.html" %}
+
+{% block form_modal %}
+{% from "_formhelpers.html" import render_field %}
+
+<!-- Modal -->
+{#<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="userExperienceModal" aria-hidden="true">#}
+<div id="surveyModal">
+{#      <div class="modal-dialog modal-dialog-centered" role="document">#}
+    <div class="survey-content">
+{#        <div class="modal-content">#}
+{#          <div class="modal-header">#}
+{#            <h2 class="modal-title" id="surveyModalTitle" hidden></h2>#}
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" hidden>
+              <span aria-hidden="true">&times;</span>
+            </button>
+{#          </div>#}
+          <div class="survey-body mx-3">
+              <form method="POST" action="" novalidate>
+                  {% for field in form %}
+                      {% set indx = loop.index %}
+                      {% if field == form.csrf_token %}
+                        {{ field }}
+    {#                  {%  elif field == form.evaluations %}#}
+    {#                      <span class="indx">{{ indx }}. </span>{{ field.label }}#}
+    {#                      {{ field }}#}
+
+                      {% else %}
+                          <span class="indx {{ field.name }}">{{ indx }}. </span>{{ field.label }}
+                          {% if field.errors %}
+                              {% if field == form.evaluations %}
+                                  <ul class="errors">
+{#                                    <li>{{ form_errors["All evaluation fields should be filled in"] }}</li>#}
+                                    <li>{{ form_errors["multi_invalid"] }}</li>
+                                  </ul>
+                              {% elif field == form.comment %}
+                                  <ul class="errors">
+{#                                    <li>{{ form_errors["All evaluation fields should be filled in"] }}</li>#}
+                                    <li>{{ form_errors["long_comment"] }}</li>
+                                  </ul>
+                              {% else %}
+                                  <ul class=errors>
+{#                                    <li>{{ form_errors["This field is required"] }}</li>#}
+                                    <li>{{ form_errors["required"] }}</li>
+{#                                  {% for error in field.errors %}#}
+{#                                    <li>{{ form_errors[error] }}</li>#}
+{#                                  {% endfor %}#}
+                                  </ul>
+                              {% endif %}
+                          {% endif %}
+                          {{ field }}
+
+                      {% endif %}
+                  {% endfor %}
+                  <div id="submitBtnContainer"><button type="submit" class="btn btn-primary">{{ submit_btn_label }}</button></div>
+              </form>
+          </div>
+    {#      <div class="modal-footer">#}
+    {#        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+    {#        <button type="button" class="btn btn-primary">Save changes</button>#}
+    {#      </div>#}
+{#        </div>#}
+    </div>
+</div>
+{% endblock %}

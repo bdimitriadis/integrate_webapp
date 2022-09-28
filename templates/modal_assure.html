@@ -1,0 +1,30 @@
+{% extends "prebase.html" %}
+
+{% block assure_modal %}
+
+<!-- Modal -->
+<div id="surveyModal">
+    {#      <div class="modal-dialog modal-dialog-centered" role="document">#}
+    <div class="survey-content col-8 offset-2">
+{#<div class="modal fade" id="assureModal" tabindex="-1" role="dialog" aria-labelledby="assureModalLabel" aria-hidden="true">#}
+{#    <div class="modal-dialog">#}
+{#        <div class="modal-content">#}
+{#            <div class="modal-header">#}
+{#                <h4 class="modal-title" id="assureModalTitle">{{ loc_data["modal_title"] }}</h4>#}
+{#            </div>#}
+            <div class="modal-body">
+                {% if loc_data.get("modal_body") %}
+                    <div class="my-3"><i class="fas fa-check" style="color:green"></i> {{ loc_data.get("modal_body") }}</div>
+                {% endif %}
+                {% if loc_data.get("modal_body_extra") %}
+                    <div><i class="fas fa-times" style="color:red"></i> {{ loc_data.get("modal_body_extra") }}</div>
+                {% endif %}
+
+            </div>
+{#            <div class="modal-footer">#}
+{#                <button type="button" class="btn btn-default" data-dismiss="modal">{{ loc_data["btn_label"] }}</button>#}
+{#            </div>#}
+        </div>
+    </div>
+{#</div>#}
+{% endblock %}

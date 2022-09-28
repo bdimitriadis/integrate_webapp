@@ -1,0 +1,284 @@
+{% extends "prebase.html" %}
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{##}
+{#<head>#}
+{##}
+{#    <meta charset="utf-8">#}
+{#    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">#}
+{#    <meta content="" name="description">#}
+{#    <meta content="" name="author">#}
+{##}
+{##}
+{#    <title>INTEGRATE toolkit</title>#}
+{##}
+{##}
+{#    <!-- Bootstrap Core CSS -->#}
+{#    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">#}
+{##}
+{#    <!-- Custom Fonts -->#}
+{#    <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"#}
+{#          type="text/css">#}
+{#    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"#}
+{#          rel="stylesheet" type="text/css">#}
+{#    <link href="{{ url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css') }}"#}
+{#          rel="stylesheet">#}
+{##}
+{#    <link href="{{ url_for('static', filename='fonts/fontawesome/css/fontawesome.min.css') }}"#}
+{#          rel="stylesheet">#}
+{##}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icofont/icofont.min.css') }}">#}
+{##}
+{#    <!-- Custom CSS -->#}
+{##}
+{#    <link href="{{ url_for('static', filename='css/stylish-portfolio.min.css') }}" rel="stylesheet">#}
+{#    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">#}
+{#    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">#}
+{##}
+{#    <link href="{{ url_for('static', filename='vendor/flag-icon-css/css/flag-icon.css') }}" rel="stylesheet"#}
+{#          type="text/css">#}
+{##}
+{##}
+{#</head>#}
+{##}
+{#<body id="page-top">#}
+{% block base_body %}
+
+<!-- Header -->
+<header class="masthead d-flex">
+    <div class="container-fluid mb-2 col-md-9 col-xs-6">
+        <a href={{ "/?lang={}".format(lang) }}>
+            <img class="img-fluid" src="{{ url_for('static', filename='images/RiskRadar_logo_'+ lang +'_w.png') }}" alt="RiskRadar logo">
+{#            <img class="img-fluid" src="{{ url_for('static', filename='images/INTEGRATE_logo.png') }}"#}
+{#                 alt="INTEGRATE toolkit logo">#}
+
+        </a>
+    </div>
+
+{#    <div class="container-fluid mb-2 col-md-9 col-xs-6">#}
+{#        <a class="row" href="/" rel="keep-params">#}
+{#            <div>#}
+{#                <img class="img-fluid" src="{{ url_for('static', filename='images/INTEGRATE_logo.png') }}"#}
+{#                 alt="INTEGRATE toolkit logo">#}
+{#            </div>#}
+{##}
+{#            <div><span class="d-block logo-title">Integrate</span><span class="d-block logo-title logo-subtitle">Radar</span></div>#}
+{#            <div><p class="d-block logo-title">Integrate</p><p class="d-block logo-title logo-subtitle">Radar</p></div>#}
+{#        </a>#}
+{#    </div>#}
+
+
+    <div class="overlay"></div>
+
+    <div class="col-md-8 col-xs-8">
+        <div class="btn-group col-xs-6 col-md-3 mt-3" role="group">
+{#            <button id="btnGrpLng" type="button" class="btn btn-lng dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                <i class="fas fa-globe-europe fa-2x"></i>#}
+{#            </button>#}
+            <button id="btnGrpLng" type="button" class="btn btn-lng" data-toggle="dropdown">
+                <h4>
+                    <span class="badge">
+                        <span class="flag-icon flag-icon-{{ lang }} mr-2"></span><span class="btn-lng-txt mr-1"></span><span class="dropdown-toggle"></span>
+                    </span>
+                </h4>
+            </button>
+
+            <div class="dropdown-menu menu-lng" aria-labelledby="btnGrpLng">
+                <a class="dropdown-item d-block translate" href="?lang=en" id="en">
+                    <div>
+                        <h4>
+                            <span class="badge "><span class="flag-icon flag-icon-gb mr-1"></span> English </span>
+                        </h4>
+                    </div>
+                </a>
+                <a class="dropdown-item d-block translate" href="?lang=it" id="it">
+                    <div>
+                        <h4>
+                            <span class="badge"><span class="flag-icon flag-icon-it  mr-1"></span> Italiano </span>
+                        </h4>
+                    </div>
+                </a>
+                <a class="dropdown-item d-block translate" href="?lang=lt" id="lt">
+                    <div>
+                        <h4>
+                            <span class="badge "><span class="flag-icon flag-icon-lt  mr-1"></span> Lietuvių </span>
+                        </h4>
+                    </div>
+                </a>
+                <a class="dropdown-item d-block translate" href="?lang=hr" id="hr">
+                    <div>
+                        <h4>
+                            <span class="badge"><span class="flag-icon flag-icon-hr  mr-1"></span> Hrvatski </span>
+                        </h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+        <a class="menu-toggle rounded col-xs-6 col-md-3" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+
+
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a class="js-scroll-trigger" href={{ "/?lang={}".format(lang) }}>{{ sidebar_title }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href="" data-toggle="modal" data-target="#RC_modal">{{ sidebar_items.0["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/facts?lang={}".format(lang) }}>{{ sidebar_items.1["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/TBfacts?lang={}".format(lang) }}>{{ sidebar_items.2["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/PrEP?lang={}".format(lang) }}>{{ sidebar_items.3["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/UequalsU?lang={}".format(lang) }}>{{ sidebar_items.4["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger ls-modal" href="#" data-target="/survey" data-modal-title="{{ survey_modal_title }}">{{ sidebar_items.5["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/testfinder?lang={}".format(lang) }}>{{ sidebar_items.6["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/pn?lang={}".format(lang) }}>{{ sidebar_items.7["menu_item"] }}</a>
+                </li>
+                <div class="dropdown-divider"></div>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/about?lang={}".format(lang) }}>{{ sidebar_items.8["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/contact?lang={}".format(lang) }}>{{ sidebar_items.9["menu_item"] }}</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="js-scroll-trigger" href={{ "/?lang={}".format(lang) }}>{{ sidebar_items.10["menu_item"] }}</a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+<div id="body_content">
+
+    {% block icon_bar %}
+        <div class="icon-bar ul">
+            <li>
+              <a href={{ "/?lang={}".format(lang) }}><i class="fas fa-home"></i></a>
+            </li>
+        </div>
+    {% endblock %}
+
+
+    {% include "RC_modal.html" %}
+
+    {% block body %}
+    {% endblock %}
+</div>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+    
+<!-- Footer -->
+<!--<footer class="footer text-center bg-primary">-->
+<footer class="footer text-center bg-primary d-flex mt-auto fixed-bottom">
+    <div class="container">
+        <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3" href="https://integrateja.eu/" target="_blank">
+                    <i class="icon-link"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/IntegrateJA"
+                   target="_blank">
+                    <i class="icon-social-twitter"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3"
+                   href="http://www.linkedin.com/groups/12070241/profile" target="_blank">
+                    <i class="icon-social-linkedin"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3" href="http://www.facebook.com/IntegrateJA/"
+                   target="_blank">
+                    <i class="icon-social-facebook"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white mr-3"
+                   href="http://www.youtube.com/channel/UCHIoihYeO0w89rH-OC9Ic3Q/" target="_blank">
+                    <i class="icon-social-youtube"></i>
+                </a>
+            </li>
+        </ul>
+        <!--<p class="text-faded small mb-0">Copyright © 2017 The INTEGRATE Consortium</p>-->
+
+        <div class="row">
+            <div class="col-md-2">
+                <img style="max-width:150px;" src="/static/images/EU.png">
+            </div>
+            <div class="col-md-10 copyright">
+                <span class="align-text-bottom">
+                    {{ footer }}<br>
+                    {{ copyright }}
+{#                    The Joint Action INTEGRATE has received funding from the European Union, in the framework of the 3rd Health Programme (2014-2020). <br> Copyright © 2017 The INTEGRATE Consortium#}
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
+{##}
+{#<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/stylish-portfolio.min.js') }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/keep-params.js') }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/survey-modal.js') }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/change-lang.js') }}"></script>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/conditional-action-question.js') }}"></script>#}
+{##}
+{#{% block extra_scripts %}#}
+{#{% endblock %}#}
+{#<script>#}
+{#    $(document).ready(function() {#}
+{#        $('[data-toggle="popover"]').popover({html:true});#}
+{#    });#}
+{#</script>#}
+{##}
+{#{% block questionaire %} {% endblock %}#}
+{##}
+{#{% include "survey_modal.html" %}#}
+{#{% include "generic_modal.html" %}#}
+{##}
+{#</body>#}
+{##}
+{##}
+{##}
+{#{% include "RC_modal.html" %}#}
+{##}
+{##}
+{#</html>#}

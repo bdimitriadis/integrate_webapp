@@ -1,0 +1,90 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#    <head>#}
+{#        <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">#}
+{##}
+{#        <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>#}
+{#        <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>#}
+{#        <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>#}
+{#        <script src="{{ url_for('static', filename='js/stylish-portfolio.min.js') }}"></script>#}
+{##}
+{#        <script src="{{ url_for('static', filename='js/conditional-action-question.js') }}"></script>#}
+{#    </head>#}
+{#    <body>#}
+{#        #}
+{##}
+{#    </body>#}
+{#</html>#}
+{% extends "prebase.html" %}
+
+{% block form_modal %}
+{% from "_formhelpers.html" import render_field %}
+
+<!-- Modal -->
+{#<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="userExperienceModal" aria-hidden="true">#}
+<div id="passcodeValidation">
+{#      <div class="modal-dialog modal-dialog-centered" role="document">#}
+    <div class="pvalidation-content">
+{#        <div class="modal-content">#}
+{#          <div class="modal-header">#}
+{#            <h2 class="modal-title" id="surveyModalTitle" hidden></h2>#}
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" hidden>
+              <span aria-hidden="true">&times;</span>
+            </button>
+{#          </div>#}
+          <div class="pvalidation-body mx-3 text-center">
+              <form method="POST" action="" novalidate>
+                <div class="my-3 font-weight-bold">{{ loc_data.get("enter_pass_desc") }}</div>
+                <div class="mt-3">
+                    {% if wrong_pass_error %}
+                        <ul class="errors">
+                            <li>{{ wrong_pass_error }}</li>
+                        </ul>
+                    {% endif %}
+                    <span class="text-primary font-weight-bold mb-3">{{ loc_data.get("enter_pass_fld_lbl") }}:</span><br>
+
+                    {{ form.csrf_token }}
+                    {% if form.passcode_flds.errors %}
+                        <ul class="errors">
+                            <li>{{ form_errors.get(form.passcode_flds.errors|first|first) }}</li>
+                        </ul>
+                    {% endif %}
+                    <ul class="list-inline">
+                        {% for field in form.passcode_flds %}
+{#                        {{ form.passcode_flds }}#}
+                            <li class="list-inline-item text-center">{{ field }}</li>
+                        {% endfor %}
+                    </ul>
+
+{#                    {% for field in form %}#}
+{#                      {% if field == form.csrf_token %}#}
+{#                        {{ field }}#}
+{#                      {% else %}#}
+{#                          {% if field.errors %}#}
+{##}
+{#                                {%  for f in field %}#}
+{#                                  <ul class="errors">#}
+{#                                    <li>{{ form_errors.get(field.errors.0) }}</li>#}
+{#                                    {% for error in field.errors %}#}
+{#                                        {{ error }}#}
+{#                                        <li>{{ form_errors.get(error)}}</li>#}
+{#                                    {% endfor %}#}
+{#                                  </ul>#}
+{#                                {% endfor %}#}
+{#                          {% endif %}#}
+{#                          {{ field }}#}
+{##}
+{#                      {% endif %}#}
+{#                  {% endfor %}#}
+                  <div id="submitBtnContainer"><button type="submit" class="btn btn-secondary mt-3">{{ submit_btn_label }}</button></div>
+                </div>
+              </form>
+          </div>
+    {#      <div class="modal-footer">#}
+    {#        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+    {#        <button type="button" class="btn btn-primary">Save changes</button>#}
+    {#      </div>#}
+{#        </div>#}
+    </div>
+</div>
+{% endblock %}

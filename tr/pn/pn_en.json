@@ -1,0 +1,22 @@
+{
+  "notify_btn_label": "Notify a partner",
+  "passcode_form": {
+    "enter_pass_title": "Code Validation",
+    "enter_pass_desc": "You have to enter the code you have received by your medical therapist in order to authorize for partner notification",
+    "enter_pass_fld_lbl": "Please enter your code",
+    "wrong_pass_error": "The password you entered is invalid or expired",
+    "unauthenticated_error": "Not authenticated user",
+    "unauthorized_error": "Not authorized user"
+  },
+  "send_msg_form": {
+    "send_msg_explain": "Notify the people that you really care about. Put a valid phone number in the text field below and tap send. Below is the default message that will be send to your partner.",
+    "msg_template": "A past sexual partner is notifying you that you may have been exposed to an STΙ (including HIV or hepatitis). It is recommended to get tested for all STΙs as soon as possible. To locate a testing site near you visit the [testfinder_link]\n This is the pilot partner notification service of the EU project INTEGRATE [integrateja_link]",
+    "integrateja_link": "https://www.integrateja.eu",
+    "testfinder_link": "http://83.212.115.126/testfinder",
+    "phone_fld_lbl": "+306999999999",
+    "msg_fld_lbl": "Default Message:",
+    "send_btn_lbl": "Send",
+    "send_success": "Your message was sent successfully to the following number(s)",
+    "send_failure": "I am sorry but your message could not be sent to the following number(s)"
+  }
+}

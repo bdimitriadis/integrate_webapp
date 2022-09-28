@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Risk Radar</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css') }}"
+          rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='fonts/fontawesome/css/fontawesome.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/font-awesome-animation/dist/font-awesome-animation.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icofont/icofont.min.css') }}">
+
+    <!-- Custom CSS -->
+
+    <link href="{{ url_for('static', filename='css/stylish-portfolio.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <link href="{{ url_for('static', filename='vendor/flag-icon-css/css/flag-icon.css') }}" rel="stylesheet"
+          type="text/css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/Magnific-Popup/dist/magnific-popup.css') }}">
+
+
+</head>
+
+<body id="page-top">
+
+{% block base_body %}{% endblock %}
+
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/stylish-portfolio.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/keep-params.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/survey-modal.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/change-lang.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/conditional-action-question.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/policy_styling.js') }}"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="{{ url_for('static', filename='vendor/Magnific-Popup/dist/jquery.magnific-popup.js')}}"></script>
+
+<script src="{{ url_for('static', filename='js/img-magnify.js') }}"></script>
+
+{% block extra_scripts %}
+{% endblock %}
+
+<div class=" consent-banner alert alert-dismissible fade show" role="banner">
+    <p class="text-center">
+        {{ acknowledgement_parts[0] }}<a target="_blank" href={{ "{}?lang={}".format(url_for("show_cookies_policy"), lang) }}>{{ acknowledgement_parts[1] }}</a>{{ acknowledgement_parts[2] }} <a target="_blank" href={{ "{}?lang={}".format(url_for("show_privacy_policy"), lang) }}>{{ acknowledgement_parts[3] }}</a>.
+    </p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+{#<script>#}
+{#    $(document).ready(function() {#}
+{#        $('[data-toggle="popover"]').popover({html:true});#}
+{#    });#}
+{#</script>#}
+
+{#{% include "survey_modal.html" %}#}
+
+
+</body>
+
+<div>{% block assure_modal %} {% endblock %}</div>
+<div>{% block form_modal %} {% endblock %}</div>
+{% include "generic_modal.html" %}
+
+{#{% include "RC_modal.html" %}#}
+
+
+</html>
